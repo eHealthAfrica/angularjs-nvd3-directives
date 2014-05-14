@@ -974,6 +974,7 @@
                     tooltips: '@',
                     tooltipcontent: '&',
                     color: '&',
+                    barcolor: '&',
                     showcontrols: '@',
                     margin: '&',
                     nodata: '@',
@@ -1084,6 +1085,10 @@
 
                                     if(attrs.valueformat){
                                         chart.valueFormat(scope.valueformat());
+                                    }
+
+                                    if(attrs.barcolor){
+                                        chart.barColor(scope.barcolor());
                                     }
 
                                     scope.d3Call(data, chart);
